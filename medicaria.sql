@@ -67,7 +67,7 @@ ALTER TABLE `importancia`
   ADD PRIMARY KEY (`id`);
 --
 ALTER TABLE `importancia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 -- --------------------------------------------------------------------------------
 
@@ -98,7 +98,7 @@ ALTER TABLE `medicamento`
   ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `medicamento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 -- --------------------------------------------------------------------------------
 
