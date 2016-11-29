@@ -5,7 +5,7 @@
 -- ---------------------------------
 
 CREATE TABLE imagen(
-	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     descripcion VARCHAR(255),
     fecha DATETIME,
     ubicacion VARCHAR(255),
@@ -28,7 +28,7 @@ VALUES ("Imagen de tipo educativa","2016-11-26","Valencia",1,3),
 
 CREATE TABLE `importancia` (
   `id` int(11) NOT NULL,
-  `descripcion` varchar(255) NOT NULL
+  `descripcion` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------------------------------
@@ -65,7 +65,7 @@ ALTER TABLE `importancia`
 
 CREATE TABLE `medicamento` (
   `id` int(11) NOT NULL,
-  `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `descripcion` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
@@ -95,9 +95,9 @@ ALTER TABLE `medicamento`
 -- --------------------------------------------------------------------------------
 
 CREATE TABLE via (
-id INT AUTO_INCREMENT PRIMARY KEY,
-descripcion VARCHAR(255) NOT NULL,
-id_medicamento INT NOT NULL, 
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+descripcion VARCHAR(255),
+id_medicamento INT(11), 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
