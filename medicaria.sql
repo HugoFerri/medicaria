@@ -29,7 +29,7 @@ VALUES ("Imagen de tipo educativa","2016-11-26","Valencia",1,3),
 CREATE TABLE `importancia` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `importancia`
