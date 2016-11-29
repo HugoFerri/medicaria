@@ -3,6 +3,14 @@
 -- ---------------------------------
 -- Sistema de información Sanitario
 -- ---------------------------------
+-- phpMyAdmin SQL Dump
+-- version 4.6.3
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: localhost:3306
+-- Tiempo de generación: 29-11-2016 a las 07:07:56
+-- Versión del servidor: 5.6.32
+-- Versión de PHP: 5.6.25
 
 CREATE TABLE imagen(
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -59,7 +67,7 @@ ALTER TABLE `importancia`
   ADD PRIMARY KEY (`id`);
 --
 ALTER TABLE `importancia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 -- --------------------------------------------------------------------------------
 
@@ -90,7 +98,7 @@ ALTER TABLE `medicamento`
   ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `medicamento`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 -- --------------------------------------------------------------------------------
 
@@ -116,4 +124,36 @@ VALUES ("Via oral",1),
 
 -- --------------------------------------------------------------------------------
 
+CREATE TABLE `medico` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255),
+  `primer_apellido` varchar(255),
+  `segundo_apellido` varchar(255),
+  `id_servicio` int(11) NOT NULL,
+  `id_especialidad` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `medico`
+--
+
+INSERT INTO `medico` (`id`, `nombre`, `primer_apellido`, `segundo_apellido`, `id_servicio`, `id_especialidad`) VALUES
+(1, 'Adrian', 'Rodriguez', 'Yanez', 1, 1),
+(2, 'Francisco', 'Rodriguez', 'Garcia', 2, 5),
+(3, 'Fernando', 'Gonzalez', 'Castro', 3, 7),
+(4, 'Antonio', 'Ruiz', 'Hernandez', 4, 4),
+(5, 'Miguel', 'Sanchez', 'Iglesias', 7, 8),
+(6, 'Rafael', 'Batistuta', 'Jimenez', 6, 2),
+(7, 'Jose', 'Perez', 'Gomez', 2, 2),
+(8, 'Alvaro', 'Medina', 'Rodriguez', 6, 6),
+(9, 'Juana', 'Jimenez', 'Rodriguez', 4, 4),
+(10, 'Cristina', 'Fernandez', 'Hernandez', 5, 5);
+
+ALTER TABLE `medico`
+  ADD PRIMARY KEY (`id`);
+
+
+ALTER TABLE `medico`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+-- --------------------------------------------------------------------------------
