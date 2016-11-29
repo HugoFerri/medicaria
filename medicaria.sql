@@ -9,8 +9,8 @@ CREATE TABLE imagen(
     descripcion VARCHAR(255),
     fecha DATETIME,
     ubicacion VARCHAR(255),
-    id_prueba INT(10),
-    id_tecnica INT(10)
+    id_prueba INT(11),
+    id_tecnica INT(11)
 );
 
 
