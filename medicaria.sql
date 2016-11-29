@@ -12,14 +12,34 @@
 -- Versión del servidor: 5.6.32
 -- Versión de PHP: 5.6.25
 
+CREATE TABLE imagen(
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    descripcion VARCHAR(255),
+    fecha DATETIME,
+    ubicacion VARCHAR(255),
+    id_prueba INT(11),
+    id_tecnica INT(11)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+INSERT INTO imagen (descripcion,fecha,ubicacion,id_prueba,id_tecnica)
+VALUES ("Imagen de tipo educativa","2016-11-26","Valencia",1,3),
+("Imagen de tipo sanitaria","2016-11-28","Madrid",3,1),
+("Imagen de tipo bucodental","2016-11-13","Barcelona",2,2),
+("Imagen mostrando un corazon","2016-11-16","Castilla la Mancha",2,4),
+("Imagen imitando un pulmon fumador","2016-11-18","Malaga",4,5),
+("Imagen de voluntarios cruz roja","2016-11-21","Picassent",8,6),
+("Imagen de ambulancias de urgencia","2016-11-20","Valencia",7,6),
+("Imagen de operacion de urgencia","2016-11-14","Ontinyent",7,7),
+("Imagen de enfermo cronico","2016-11-11","La casa blanca",8,9),
+("Imagen mostrando el funcionamiento de una incubadora","2016-11-30","Barcelona",10,8);
+
 CREATE TABLE `importancia` (
   `id` int(11) NOT NULL,
-  `descripcion` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `descripcion` varchar(255)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Volcado de datos para la tabla `importancia`
---
+-- --------------------------------------------------------------------------------
 
 INSERT INTO `importancia` (`id`, `descripcion`) VALUES
 (1, 'irrelevante'),
@@ -43,61 +63,19 @@ INSERT INTO `importancia` (`id`, `descripcion`) VALUES
 (19, 'mortal'),
 (20, 'desconocida');
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `importancia`
---
 ALTER TABLE `importancia`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `importancia`
 --
 ALTER TABLE `importancia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
--- phpMyAdmin SQL Dump
--- version 4.6.3
--- https://www.phpmyadmin.net/
---
--- Servidor: localhost:3306
--- Tiempo de generación: 29-11-2016 a las 07:00:16
--- Versión del servidor: 5.5.50
--- Versión de PHP: 5.5.38
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `medicaraDB`
---
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `medicamento`
---
+-- --------------------------------------------------------------------------------
 
 CREATE TABLE `medicamento` (
   `id` int(11) NOT NULL,
-  `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+  `descripcion` varchar(255)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Volcado de datos para la tabla `medicamento`
---
 
 INSERT INTO `medicamento` (`id`, `descripcion`) VALUES
 (1, 'acetadote'),
@@ -116,43 +94,35 @@ INSERT INTO `medicamento` (`id`, `descripcion`) VALUES
 (14, 'trental'),
 (15, 'astudal');
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `medicamento`
---
 ALTER TABLE `medicamento`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `medicamento`
---
 ALTER TABLE `medicamento`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+
+-- --------------------------------------------------------------------------------
+
+CREATE TABLE via (
+id INT(11) AUTO_INCREMENT PRIMARY KEY,
+descripcion VARCHAR(255),
+id_medicamento INT(11)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+INSERT INTO via (descripcion, id_medicamento)
+VALUES ("Via oral",1),
+("Via sublingual",2),
+("Via topica",3),
+("Via transdermica",4),
+("Via oftalmica",5),
+("Via otica",6),
+("Via intranasal",7),
+("Via intravenosa",8),
+("Via intramuscular",9),
+("Via subcutanea",10);
 
---
--- Base de datos: `medicaria`
---
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `medico`
---
+-- --------------------------------------------------------------------------------
 
 CREATE TABLE `medico` (
   `id` int(11) NOT NULL,
@@ -179,25 +149,11 @@ INSERT INTO `medico` (`id`, `nombre`, `primer_apellido`, `segundo_apellido`, `id
 (9, 'Juana', 'Jimenez', 'Rodriguez', 4, 4),
 (10, 'Cristina', 'Fernandez', 'Hernandez', 5, 5);
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `medico`
---
 ALTER TABLE `medico`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
 
---
--- AUTO_INCREMENT de la tabla `medico`
---
 ALTER TABLE `medico`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+-- --------------------------------------------------------------------------------
