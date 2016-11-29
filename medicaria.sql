@@ -11,7 +11,7 @@ CREATE TABLE imagen(
     ubicacion VARCHAR(255),
     id_prueba INT(11),
     id_tecnica INT(11)
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 INSERT INTO imagen (descripcion,fecha,ubicacion,id_prueba,id_tecnica)
@@ -125,7 +125,7 @@ CREATE TABLE via (
 id INT AUTO_INCREMENT PRIMARY KEY,
 descripcion VARCHAR(255) NOT NULL,
 id_medicamento INT NOT NULL, 
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Indices de la tabla `via`
