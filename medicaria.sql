@@ -1,27 +1,5 @@
--- ---------------------------------
--- Base de datos: `medicaria`
--- ---------------------------------
--- Sistema de información Sanitario
--- ---------------------------------
-
--- phpMyAdmin SQL Dump
--- version 4.6.3
--- https://www.phpmyadmin.net/
---
--- Servidor: localhost:3306
--- Tiempo de generación: 29-11-2016 a las 07:09:11
--- Versión del servidor: 5.6.32
--- Versión de PHP: 5.6.25
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
---
--- Base de datos: `medicaria`
---
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `paciente`
