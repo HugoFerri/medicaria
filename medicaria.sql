@@ -97,7 +97,7 @@ ALTER TABLE `medicamento`
 CREATE TABLE via (
 id INT(11) AUTO_INCREMENT PRIMARY KEY,
 descripcion VARCHAR(255),
-id_medicamento INT(11), 
+id_medicamento INT(11)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
