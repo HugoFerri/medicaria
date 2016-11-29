@@ -31,9 +31,7 @@ CREATE TABLE `importancia` (
   `descripcion` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Volcado de datos para la tabla `importancia`
---
+-- --------------------------------------------------------------------------------
 
 INSERT INTO `importancia` (`id`, `descripcion`) VALUES
 (1, 'irrelevante'),
@@ -63,18 +61,13 @@ ALTER TABLE `importancia`
 ALTER TABLE `importancia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
---
--- Estructura de tabla para la tabla `medicamento`
---
+-- --------------------------------------------------------------------------------
 
 CREATE TABLE `medicamento` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Volcado de datos para la tabla `medicamento`
---
 
 INSERT INTO `medicamento` (`id`, `descripcion`) VALUES
 (1, 'acetadote'),
@@ -93,33 +86,13 @@ INSERT INTO `medicamento` (`id`, `descripcion`) VALUES
 (14, 'trental'),
 (15, 'astudal');
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `medicamento`
---
 ALTER TABLE `medicamento`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `medicamento`
---
 ALTER TABLE `medicamento`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
-
---
--- Estructura de tabla para la tabla `via`
---
+-- --------------------------------------------------------------------------------
 
 CREATE TABLE via (
 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -127,9 +100,6 @@ descripcion VARCHAR(255) NOT NULL,
 id_medicamento INT NOT NULL, 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Indices de la tabla `via`
---
 
 INSERT INTO via (descripcion, id_medicamento)
 VALUES ("Via oral",1),
@@ -142,3 +112,8 @@ VALUES ("Via oral",1),
 ("Via intravenosa",8),
 ("Via intramuscular",9),
 ("Via subcutanea",10);
+
+
+-- --------------------------------------------------------------------------------
+
+
