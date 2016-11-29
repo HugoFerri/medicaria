@@ -10,7 +10,7 @@ CREATE TABLE `test`.`importancia`
      `descripcion` VARCHAR(255) NOT NULL, 
      PRIMARY KEY (`id`) 
   ) 
-engine = innodb;
+engine = innodb; 
 
 INSERT INTO `importancia` 
             (`id`, 
@@ -18,20 +18,20 @@ INSERT INTO `importancia`
 VALUES      (NULL, 
              'irrelevante'), 
             (NULL, 
-             'leve'), 
+             'poco importante'), 
             (NULL, 
-             'moderada'), 
+             'algo importante'), 
             (NULL, 
-             'severa'), 
+             'moderadamente importante'), 
             (NULL, 
-             'grave'), 
+             'importante'), 
             (NULL, 
-             'muy grave'), 
+             'muy importante'), 
             (NULL, 
-             'crítica'), 
+             'extremadamente importante'), 
             (NULL, 
-             'fatal'), 
+             'importancia crítica'), 
             (NULL, 
-             'mortal'), 
+             'fundamental'), 
             (NULL, 
              'desconocida')
